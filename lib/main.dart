@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample_show_and_hide/interactive_ui_sample/interactive_ui_sample.dart';
 import 'package:sample_show_and_hide/show_and_hide_sample/show_and_hide_sample.dart';
 
 void main() {
@@ -37,6 +38,28 @@ class MyHomePage extends StatelessWidget {
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const ShowAndHideSampleScreen(),
+              ),
+            ),
+          ),
+          ListTile(
+            title: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('対話型UI Visibility'),
+            ),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const InteractiveVisibilityScreen(),
+              ),
+            ),
+          ),
+          ListTile(
+            title: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('対話型UI Collection If'),
+            ),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const InteractiveCollectionIfScreen(),
               ),
             ),
           ),
